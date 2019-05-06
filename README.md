@@ -32,8 +32,8 @@ It includes 5 modules:
 
       crontab -e  
 
-Add this line in crontab(replace UUUUU and PPPPP with your username and password):  
-/5 * * * * echo url="https://api.dynu.com/nic/update?username=UUUUU&password=PPPPP" | curl -k -K -
+  Add this line in crontab(replace UUUUU and PPPPP with your username and password):  
+  /5 * * * * echo url="https://api.dynu.com/nic/update?username=UUUUU&password=PPPPP" | curl -k -K -
 
 ### 3. Install rclone to connect Google drive
 - Install rclone:
@@ -54,16 +54,16 @@ Add this line in crontab(replace UUUUU and PPPPP with your username and password
 
       crontab -e  
 
-Add this line in crontab:  
-*/5 * * * * /usr/bin/flock -xn /tmp/uploadtogoogle.lock -c '/home/pi/uploadtogoogle.sh'  
+  Add this line in crontab:  
+  */5 * * * * /usr/bin/flock -xn /tmp/uploadtogoogle.lock -c '/home/pi/uploadtogoogle.sh'  
 
 ### 5. Optional: Baidupcs-web
 If you need to transfer file from Baidu Wangpan to Google Drive, Baidupcs-web is a good Linux client to access Baidu Wangpan. Baidupcs-web bases on BaiduPCS-Go. You can find the latest release from this [link](https://github.com/liuzhuoling2011/baidupcs-web/releases).  
 
-      wget https://github.com/liuzhuoling2011/baidupcs-web/releases/download/3.6.7/BaiduPCS-Go-3.6.7-linux-arm.zip  
-      unzip BaiduPCS-Go-3.6.7-linux-arm.zip
+    wget https://github.com/liuzhuoling2011/baidupcs-web/releases/download/3.6.7/BaiduPCS-Go-3.6.7-linux-arm.zip  
+    unzip BaiduPCS-Go-3.6.7-linux-arm.zip
 There is only one binary file in zip which could be executed directly
 
-      ./BaiduPCS-Go-3.6.7-linux-arm/BaiduPCS-Go  
+    ./BaiduPCS-Go-3.6.7-linux-arm/BaiduPCS-Go  
 
 Access http://{IP of Raspberry Pi}:5299 in browser  
