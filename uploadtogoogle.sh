@@ -11,13 +11,13 @@ REMOTEFOLDER='/IOTProject-Backup'
 LOGFILE="${HOME}/gdrive/rclone.log"
 
 #For China Baidu cloud disk
-BDlocalFolder="${HOME}/gdrive/888888_usernameOfBaidu"
-BDprefixOptional='/apps/baidu_shurufa'
-BDuncompleteExt='.BaiduPCS-Go-downloading'
+#BDlocalFolder="${HOME}/gdrive/888888_usernameOfBaidu"
+#BDprefixOptional='/apps/baidu_shurufa'
+#BDuncompleteExt='.BaiduPCS-Go-downloading'
 
 #For Aria2
 ArialocalFolder="${HOME}/gdrive/aria2"
-AriaprefixOptional='NotUsed'
+AriaprefixOptional=''
 AriauncompleteExt='.aria2'
 
 #Auto upload function
@@ -41,6 +41,6 @@ function UploadToGoogle() {
 }
 
 
-UploadToGoogle $BDlocalFolder $BDuncompleteExt $BDprefixOptional $OP
+#UploadToGoogle $BDlocalFolder $BDuncompleteExt $BDprefixOptional $OP
 UploadToGoogle $ArialocalFolder $AriauncompleteExt $AriaprefixOptional $OP
  
